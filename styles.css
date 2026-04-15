@@ -1,0 +1,116 @@
+/* Custom variables */
+:root {
+  --primary-txt: #fff;
+  --secondary-txt: #c5f82a;
+  --tertiary-txt: #ccc;
+  --light-bg: #333;
+  --medium-bg: #1f1f1f;
+  --dark-bg: #141414;
+}
+
+/* Universal reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* My styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--primary-txt);
+  font-weight: 500;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container.main {
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 24rem;
+  background-color: var(--medium-bg);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 5rem;
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.card h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.875rem;
+}
+
+.card p.location {
+  margin-bottom: 2rem;
+  color: var(--secondary-txt);
+}
+
+.card p.bio {
+  margin-bottom: 1.5rem;
+  color: var(--tertiary-txt);
+}
+
+.card ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+ul .link-wrapper {
+  width: 100%;
+}
+
+.link-wrapper > a {
+  display: block;
+  width: 100%;
+  background-color: var(--light-bg);
+  margin-bottom: 1rem;
+  padding: 0.875rem;
+  border-radius: 10px;
+  color: var(--primary-txt);
+  text-decoration: none;
+}
+
+.link-wrapper > a:hover {
+  background-color: var(--secondary-txt);
+  color: var(--dark-bg);
+}
+
+.link-wrapper > a:focus {
+  outline: 2px dashed var(--tertiary-txt);
+}
+
+/* Provided styles */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% - 4rem);
+  }
+}
